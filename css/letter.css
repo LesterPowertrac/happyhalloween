@@ -1,0 +1,98 @@
+    :root{
+      --paper:#fffaf3;
+      --ink:#3b2f2f;
+      --accent:#d87d7d;
+      --shadow: 0 10px 30px rgba(41,35,35,0.12);
+    }
+
+    /* Page reset */
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:var(--ink);background:linear-gradient(180deg,#f2f4f7 0%, #eef2f5 100%);display:flex;align-items:center;justify-content:center;padding:32px}
+
+    /* Card (the paper note) */
+    .card{
+      width:min(760px,92vw);
+      max-width:760px;
+      background:var(--paper);
+      border-radius:16px;
+      padding:36px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(0,0,0,0.04);
+      display:grid;
+      grid-template-columns: 220px 1fr;
+      gap:28px;
+      align-items:start;
+      position:relative;
+      overflow:hidden;
+      line-height:1.45;
+    }
+
+    /* subtle paper texture */
+    .card::before{
+      content:"";
+      position:absolute;inset:0;pointer-events:none;
+      background-image:radial-gradient(rgba(0,0,0,0.02) 0.6px, transparent 0.6px);
+      background-size:6px 6px;opacity:0.6;mix-blend-mode:overlay;
+    }
+
+    /* left panel with illustration */
+    .aside{
+      display:flex;flex-direction:column;gap:18px;align-items:center;padding-top:6px
+    }
+
+    .paper-seal{
+      width:120px;height:120px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#fff 0%,#fff7f7 100%);box-shadow:0 6px 18px rgba(216,125,125,0.12);border:1px solid rgba(216,125,125,0.18)
+    }
+
+    .heart{
+      width:58px;height:58px;display:inline-block;filter:drop-shadow(0 6px 18px rgba(216,125,125,0.12));
+    }
+
+    .small-note{font-size:14px;opacity:0.85;text-align:center}
+
+    /* main message area */
+    .message{
+      padding:6px 0 0 0;
+    }
+
+    .greeting{
+      font-family:'Dancing Script', system-ui; font-size:36px;margin:0 0 6px 0;color:var(--accent)
+    }
+
+    .body-text{
+      font-size:16px;margin:0 0 18px 0;color:var(--ink);
+    }
+
+    .signature{
+      margin-top:26px;display:flex;flex-direction:column;gap:6px;align-items:flex-end
+    }
+
+    .name{
+      font-family:'Dancing Script', system-ui;font-size:28px;margin:0;color:#6a2a2a
+    }
+
+    .ps{
+      margin-top:8px;font-size:13px;opacity:0.9
+    }
+
+    /* footer thin line */
+    .footer-line{
+      grid-column:1 / -1;height:1px;background:linear-gradient(90deg,transparent,rgba(0,0,0,0.05),transparent);margin-top:18px;border-radius:1px
+    }
+
+    /* small print */
+    .tip{font-size:12px;color:rgba(0,0,0,0.45);margin-top:10px}
+
+    /* Responsive */
+    @media (max-width:640px){
+      .card{grid-template-columns:1fr; padding:24px}
+      .aside{flex-direction:row;justify-content:space-between}
+      .paper-seal{width:86px;height:86px}
+      .greeting{font-size:28px}
+    }
+
+    /* Print-friendly */
+    @media print{
+      html,body{background:white}
+      .card{box-shadow:none;border:1px solid #eee;margin:0}
+    }

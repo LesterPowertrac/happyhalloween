@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scrollable Love Note — Design Only</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+    .paper {
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,245,242,0.98));
+      box-shadow: 0 10px 30px rgba(15,23,42,0.12);
+      border-radius: 14px;
+      border: 1px solid rgba(239,68,68,0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .corner-fold {
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 120px;
+      height: 120px;
+      transform: rotate(45deg);
+      background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,235,238,0.4));
+      box-shadow: -6px 6px 20px rgba(0,0,0,0.03) inset;
+      border-radius: 6px;
+      opacity: 0.9;
+    }
+
+    .watermark {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 160px;
+      color: rgba(239,68,68,0.03);
+      font-weight: 800;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .tape {
+      width: 120px;
+      height: 20px;
+      background: linear-gradient(90deg, rgba(245,158,11,0.14), rgba(245,158,11,0.06));
+      border-radius: 6px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+      transform: rotate(-10deg);
+    }
+
+    .scrollable-note::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .scrollable-note::-webkit-scrollbar-thumb {
+      background-color: rgba(244,63,94,0.3);
+      border-radius: 6px;
+    }
+
+    .scrollable-note::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(244,63,94,0.5);
+    }
+
+    @keyframes floaty { 0%{ transform: translateY(0) } 50%{ transform: translateY(-6px) } 100%{ transform: translateY(0) } }
+    .floaty { animation: floaty 4s ease-in-out infinite }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-rose-50 via-amber-50 to-white flex items-center justify-center p-8">
+  <div class="max-w-3xl w-full">
+    <section class="paper p-8 sm:p-12">
+      <div class="corner-fold"></div>
+      <div class="watermark">♥</div>
+
+      <div class="flex justify-center mb-6">
+        <div class="">Belated happy halloween Stephielle Z. Madrid(AKA Love❤️)👻🎃</div>
+      </div>
+      
+      <!-- Scrollable note area -->
+      <div class="scrollable-note h-96 sm:h-[28rem] rounded-md border border-dashed border-rose-100 bg-white/60 shadow-inner p-6 overflow-y-auto">
+      <h1 class="">Dear Love,</h1>
+<br>
+      <p class="mb-2 indent-8 leading-relaxed tracking-wide">  Belated happy halloween!!❤️, sorry love super late na nitong happy halloween gift ko sayo. But thankyou love sa pag wait and I hope mapasaya kita sa gift ko.</p>
+
+      <p class="mb-2 indent-8 leading-relaxed tracking-wide">Love thankyou sa araw araw mong pag ma mahal sakin. I really appreciated lahat ng effort na binibigay mo sakin araw araw. Thankyou love dahil nag e stay kapadin sakin kahit madami kang problema na kinakaharap at challenges, lalo na sa relationship natin. Super swerte ko, may loyal na gf ako na nag mamahal sakin at handang mag stay sa tabi ko tuwing na do down ako. Thankyou love sapag i intay mo sakin kahit busy ako sa work. Thankyou love kahit kunti minsan ang time natin napapa happy padin kita. </p>
+
+      <p class="mb-2 indent-8 leading-relaxed tracking-wide">Steph im sorry about sa mga words ko minsan pag satuwing nag kakasamaan tayo ng loob, din po love na nakaka tulog ako minsan sa tuwing kausap kita sagabi. Also love doon sa mga pictures dati, Im very sorry talaga. Please forgive me po love about sa malaking kasalanan ko nayon. Also sa effort ko nung last month, nung naging busy ako lalo na sa byahe. Hindi na kita gaano makausap non, iknow love nalulungkot kanon and masama ang loob mo. Im soryy lovey ko babawi ako sayo. Iknow sometimes puro din ako si bawi but di ko naman nagagawa next day lalo na pag busy ulit. But i promise na babawi padin me lalo na ngayon. I love you po always mahal ko, mahal na mahal kita palagi❤️</p>
+      
+      <p class="mb-2 indent-8 leading-relaxed tracking-wide">I am hoping and praying na tuloy tuloy natong blessings mo love. Yung bawas na ang iyong mga problem(mas maganda na wala na problem talaga), and sa family mo na maging okay na kayo always dyaan sainyo❤️. Stay strong kayo dyan love and Godbless❤️, be happy lang and enjoy kayo❤️</p>
+      
+      <p class="mb-2 indent-8 leading-relaxed tracking-wide">Goodluck palagi baby sa trabaho, and ingat ka palagi lalo na sa work mo. Iknow stress na stress ka palagi dyaan sa hospital. Lalo na pag nag kaka anxiety ka pag time na ng work, I understand yung struggles mo love. I wish andyan lang ako, kapit bahay mo para sa tuwing na pepressure ka and na lulungkot, andito lang ako sa tabi mo. But soon im sure magiging mag kasama din us sa iisang bahay😏. If nagawa nating mag kita after ng 1year and half nating ldr. Dadating din us sa panahon na mag katabi nalng us always. Steph stay strong lang palagi sa work, need ka ng mga kapatid mo, im sure pag naka graduate na sila dikana ma pepressure love kasi may katulong kana. Keep fighting lang po love, kaya mo yan! Wag ka susuko! Andito lang ako always para sayo love, andito lang ako para i comfort kita sa tuwing na lulungkot ka at papasahayin kita after🥰.</p>
+      
+      <p class="mb-2 indent-8 leading-relaxed tracking-wide">Iknow love natanongmo sakin last time if masaya paba ako sayo. Ang sagot ko ay YES IM VERY HAPPY WITH YOU. I am enjoying yung time ko sainyo❤️. Para kang computer games ko dati love(league of legends), nakakaadik ka😏. Lalo na ang thicc bootyy and thighs mo love very sexy😏. Super puti mo din, isa kanang albino stipyil🤍. Lasty paganda ka ng paganda sa paningin ko ❤️🥰</p>
+      <p class="mb-2 indent-8 leading-relaxed tracking-wide">I love you so much love, Im sorry mapangit ngayon and gawa kong gift di gaya dati. But di bale gagawa ulit ako ng mas better soon😏.</p>
+      <p class="mb-2 indent-8 leading-relaxed tracking-wide">Pahinga well love right now, relax and enjoy ka po after work. Wag mo kakalimutan mag saya or mag enjoy, always kalimutan ang work pag uwi and dont overthink about it pag mag papahinga kana. Ang mahalaga nagagawa mo and nagagampanan mo and trabaho mo ng mabuti❤️. Dont worry about the errors love, thats make learn more❤️. Ang mahalaga natututo ka love and na kakagain ka ng madaming experience, also mas nataas lalo rate mo sa professionalism and resume mo❤️</p>
+      <p class="mb-14 leading-relaxed tracking-wide">I hope mapasaya kita saaking holloween gift❤️.</p>
+        <div class="text-center ">
+        <a href="holloween.html" class="text-9xl cursor-pointer hover:bg-red-400 rounded-md">🎁</a>
+        </div>
+      </div>
+
+      <div class="mt-6 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-rose-100 to-pink-50 flex items-center justify-center shadow-sm floaty"></div>
+          <div class="w-24 h-12 rounded-lg bg-gradient-to-r from-amber-100 to-rose-50 shadow-sm"></div>
+        </div>
+        <div class="text-xs text-gray-400">--PS Jester❤️</div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
